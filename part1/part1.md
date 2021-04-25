@@ -1,17 +1,12 @@
-part 1a
-var 
+## part 1a
 1) values added:  20
 2) final result:  20
-
-let
 3) values added:  20
 4) This line returns an error, because a variable with the `let` keyword only has a block level scope. So, `let result` is defined only in the `if` condition, and not outside of it. Line 13 is outside the `if`, so the variable `result` cannot be accessed.
-
-const
 5) Because the variable `result` was defined with the `const` keyword, changing the value of `result` is not allowed, so line 9 throws an error.
 6) Line 13 is never reached because of the error caused at line 9 described in the previous question. The error causes the program to exit before it can get to line 13.
 
-Part 1b
+## Part 1b
 1) The value of `i` will be printed at line 12. In the provided example, the value 3 will be printed. This is because `i` was defined with the `var` keyword, meaning that it exists outside of the block scope it was defined in. This means that we can access it outside of the for loop it was defined in on line 6.
 2) The value of `discountedPrice` will be printed to the console. More specifically, the last value stored in the `prices` array multiplied by the `discount - 1` will be printed. For the provided example, this value will be `150`. We can print the value of `discountedPrice` to the console because it was declared with the `var` keyword, meaning that it can be accessed outside of the scope it was defined in, which was in the for loop body.
 3) The value stored in the variable `finalPrice` will be printed for the last loop of the for loop. In the example provided, `150` will be printed. When we set `finalPrice` in the for loop, we are using the declaration of `finalPrice` defined outside of the for loop.
@@ -24,15 +19,15 @@ Part 1b
 10) The value stored in the `length` variable assigned to the length of the `prices` array will be printed to the console on line 12. For the provided example, the value printed will be `3`. This works perfectly fine as the `length` is never reassigned in the program but just used as the exit condition for the for loop. We are also allowed to read variables declared with the `const` keyword as well.
 11) This function will return the list of adjusted prices after the `discount` has been applied to each item in the original `prices` array. Even though `discounted` was defined with the `const` keyword, we can still push to the array and modify what the array contains. The only thing that the `const` keyword would prevent us from doing is reassigning the `discounted` variable to something else completely. For the provided example, the list `[50, 100, 150]` is returned.
 
-Data Types
-12) a
-    a) `student.name`
-    b) `student['Grad Year']`
-    c) `student.greeting()`
-    d) `student['Favorite Teacher'].name`
-    e) `student.courseload[0]`
+12) Data Types
+    - A: `student.name`
+    - B: `student['Grad Year']`
+    - C: `student.greeting()`
+    - D: `student['Favorite Teacher'].name`
+    - E: `student.courseload[0]`
 
 Basic Operators and Type Conversion
+
 13) Arithmetic
     - a: `'3' + 2` becomes `'32'` because Javascript treated the 2 getting added to the string `3` as a concatentation operation and contenated the string `2` to make `32`.
     - b: The output of `'3' - 2` is the number `1`. Javascript recognizes this as a mathematical expression due to the subtraction symbol, Number data type and string representation of a number. Javascript will not recognize this as string concatentation because of the subtraction symbol.
@@ -52,7 +47,7 @@ Basic Operators and Type Conversion
     - f: `true === Boolean(2)` evaluates to `true` because `Boolean(2)` converts `2` to `true` and `true` has the same type and value as `true`.
 
 15) The `==` tells Javascript to compare equality with type conversion, so strings getting converted to numbers for example. The `===` tells Javascript to use strict equality when comparing and not convert any of the quantities being compared to other forms. The way I like to remember `===` is that it compares both type and value, and `==` can compare different types that evaluate to the same value through conversion.
-
+16) See `part1b-question16.js`
 17) The result of function with the given parameters will be the array `[2, 4, 6]`. To get to my answer, I first looked at what the function `doSomething` was responsible for, and I noticed that it just multiplied the number passed in by 2 and returned it. In the `modifyArray` function, the array indices are just looped through, and a new value is pushed to the `newArr` eventually returned. The callback is used in the push operation, and I noticed that the element at each index in the original array was just being passed in to that callback function, and whatever was returned from the callback function was then pushed to `newArr`. So the program basically multiplies every element in the array by 2, and pushes those new elements to a separate array that is returned.
-
+18) see `part1b-question18.js`
 19) The output of the code is 1 4 3 2, where each of the number is output on its own line.
